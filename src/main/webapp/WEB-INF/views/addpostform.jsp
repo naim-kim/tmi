@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-    <style>
+    <meta charset="UTF-8">
+    <title>Add New Team Member</title>
+    <style>>
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -68,15 +68,15 @@
 </head>
 <body>
 
-<h1>Add New Post</h1>
+<h1>Add New Team Member</h1>
 <form action="addok" method="post">
-<table id="edit">
-<tr><td>이름:</td><td><input type="text" name="name" required/></td></tr>
-<tr><td>학번:</td><td><input type="text" name="studentnum" required/></td></tr>
-    <!-- phone num varchar(10) demo 라 개인정보 보호? 차원에서 설정함-->
-<tr><td>연락처:</td><td><input type="text" name="phonenum" required/></td></tr>
-<tr><td>학부:</td><td><input type="text" name="major" required/></td></tr>
-</table>
+    <table id="edit">
+        <tr><td>이름:</td><td><input type="text" name="name" required/></td></tr>
+        <tr><td>학번:</td><td><input type="text" name="studentID" required/></td></tr>
+        <tr><td>생일:</td><td><input type="text" name="birthday" placeholder="YYYY-MM-DD" required/></td></tr>
+        <tr><td>전공:</td><td><input type="text" name="major" required/></td></tr>
+        <tr><td>MBTI:</td><td><input type="text" name="MBTI" required/></td></tr>
+    </table>
     <button type="button" onclick="location.href='list'">Go Back</button>
     <button type="submit">Add</button>
 </form>

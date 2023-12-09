@@ -9,9 +9,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34b7f74f-8e00-4fe0-b5fb-1d769907d7a1" name="Changes" comment="maven depenendcies + xml files added">
+    <list default="true" id="34b7f74f-8e00-4fe0-b5fb-1d769907d7a1" name="Changes" comment="posts edited ( 프사 동그라미 )">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fonts/SDSamliphopangcheBasic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fonts/SDSamliphopangcheOutline.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/posts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/posts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +69,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/tmi/src/main/webapp/WEB-INF/views",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/tmi/src/main/webapp/WEB-INF/views/css",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,14 +78,23 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\tmi\src\main\webapp\WEB-INF\views\css" />
       <recent name="C:\Users\User\IdeaProjects\tmi\src\main\webapp\WEB-INF\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\tmi\src\main\webapp\WEB-INF\views" />
+      <recent name="C:\Users\User\IdeaProjects\tmi\src\main\java\com\example\board" />
+      <recent name="C:\Users\User\IdeaProjects\tmi\src\main\webapp" />
+      <recent name="C:\Users\User\IdeaProjects\tmi\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunManager">
@@ -169,7 +195,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702108089960</updated>
       <workItem from="1702108090973" duration="2000" />
-      <workItem from="1702118243453" duration="2316000" />
+      <workItem from="1702118243453" duration="9892000" />
     </task>
     <task id="LOCAL-00001" summary="maven depenendcies + xml files added">
       <option name="closed" value="true" />
@@ -179,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702118674232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="posts edited ( 프사 동그라미 )">
+      <option name="closed" value="true" />
+      <created>1702120666936</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702120666936</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +221,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="maven depenendcies + xml files added" />
-    <option name="LAST_COMMIT_MESSAGE" value="maven depenendcies + xml files added" />
+    <MESSAGE value="posts edited ( 프사 동그라미 )" />
+    <option name="LAST_COMMIT_MESSAGE" value="posts edited ( 프사 동그라미 )" />
   </component>
 </project>

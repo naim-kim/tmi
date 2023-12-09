@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         body, h1, h3, p {
             margin: 0;

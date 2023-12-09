@@ -1,15 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false" %>
- <%@page import="com.example.board.BoardDAO, com.example.board.BoardVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ page import="com.example.board.TeamMemberVO" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Edit Form</title>
+	<meta charset="UTF-8">
+	<title>Edit Form</title>
 	<style>
+
 		body {
 			font-family: Arial, sans-serif;
 			background-color: #f4f4f4;
@@ -83,20 +82,20 @@
 <body>
 
 <h1>Edit Form</h1>
-<%--@elvariable id="boardVO" type=""--%>
 <div>
-<form:form modelAttribute="boardVO" method="POST" action="../editok">
-	<form:hidden path="seq"/>
-	<table id="edit">
-	<tr><td>이름</td><td><form:input path="name" /></td></tr>
-	<tr><td>학번</td><td><form:input path="studentnum" /></td></tr>
-	<tr><td>연락처</td><td><form:input path="phonenum" /></td></tr>
-	<tr><td>학부</td><td><form:input path="major" /></td></tr>
-	</table>
-	<button class="goback" type="button" onclick=history.back()>Go Back</button>
-	<button class="edit-button" type="submit">Edit</button>
-</form:form>
-
+	<%--@elvariable id="teammemberVO" type=""--%>
+	<form:form modelAttribute="teammemberVO" method="POST" action="../editok">
+		<form:hidden path="seq"/>
+		<table id="edit">
+			<tr><td>이름</td><td><form:input path="name" /></td></tr>
+			<tr><td>학번</td><td><form:input path="studentID" /></td></tr>
+			<tr><td>생일</td><td><form:input path="birthday" /></td></tr>
+			<tr><td>전공</td><td><form:input path="major" /></td></tr>
+			<tr><td>MBTI</td><td><form:input path="mbti" /></td></tr>
+		</table>
+		<button class="goback" type="button" onclick="history.back()">Go Back</button>
+		<button class="edit-button" type="submit">Edit</button>
+	</form:form>
 </div>
 </body>
 </html>

@@ -1,41 +1,62 @@
 /* style.css */
+@font-face {
+    font-family: 'SamlipOutline';
+    src: url('fonts/SDSamliphopangcheOutline.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SamlipBasic';
+    src: url('fonts/SDSamliphopangcheBasic.otf') format('opentype');
+}
+
+/* Global Styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-}
-
-h2 {
-    color: #006bb3;
-}
-
-#list {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 90%;
-    margin-top: 20px;
-}
-
-#list th, #list td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    font-family: 'SamlipBasic', sans-serif;
+    background-color: #f0f0f0;
     text-align: center;
+
 }
 
-#list th {
-    background-color: #006bb3;
-    color: white;
-    padding-top: 12px;
-    padding-bottom: 12px;
+header {
+    background-color: #98cfe9;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
 }
 
-#list tr:nth-child(even) {
-    background-color: #f2f2f2;
+.page-title, .home-title {
+    font-family: 'SamlipOutline', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px;
 }
 
-#list tr:hover {
-    background-color: #ddd;
+.page-title:hover {
+    cursor: default;
+    color: #3a5867;
 }
 
+main {
+    padding: 20px;
+    margin: 20px;
+    height: 100%;
+    background-color: #fff;
+}
+
+
+h2.sub {
+    font-family: "SamlipBasic", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+/*
 #edit {
     width: 50%;
     margin-top: 20px;
@@ -65,4 +86,60 @@ a {
 a:hover {
     text-decoration: underline;
     color: #005493;
+}
+*/
+
+/* profiles list */
+.profile-grid {
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.profile-items {
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.profile-items img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.profile-title {
+    color: white;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.profile-items:hover .overlay {
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
