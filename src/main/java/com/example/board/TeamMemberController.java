@@ -4,63 +4,62 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/board")
 public class TeamMemberController {
 
     @Autowired
-    TeamMemberDAO teammemberDAO;
+    TeamMemberDAO teamMemberDAO;
 
-    @GetMapping("/list")
+    @RequestMapping(value = "/board/list", method = RequestMethod.GET)
     public String boardlist(Model model) {
-        model.addAttribute("list", teammemberDAO.getTeamMemberList());
+        model.addAttribute("list", teamMemberDAO.getTeamMemberList());
         return "posts";
     }
 
-    @GetMapping("/add")
+    @RequestMapping(value = "/board/add", method = RequestMethod.GET)
     public String addPost() {
         return "addpostform";
     }
 
-    @PostMapping("/addok")
-    public String addPostOK(@ModelAttribute TeamMemberVO vo) {
-        int i = teammemberDAO.insertTeamMember(vo);
-        if (i == 0) {
+    @RequestMapping(value = "/board/addok", method = RequestMethod.POST)
+    public String addPostOK(TeamMemberVO vo) {
+        int i = teamMemberDAO.insertTeamMember(vo);
+        if (i == 0)
             System.out.println("데이터 추가 실패");
-        } else {
+        else
             System.out.println("데이터 추가 성공!!!");
-        }
         return "redirect:list";
     }
 
-    @GetMapping("/editpost/{id}")
+    @RequestMapping(value = "/board/editpost/{id}", method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
-        TeamMemberVO teamMemberVO = teammemberDAO.getTeamMember(id);
+        TeamMemberVO teamMemberVO = teamMemberDAO.getTeamMember(id);
         model.addAttribute("teamMemberVO", teamMemberVO);
         return "editform";
     }
 
-    @PostMapping("/editok")
-    public String editOK(@ModelAttribute TeamMemberVO vo) {
-        int i = teammemberDAO.updateTeamMember(vo);
-        if (i == 0) {
+    @RequestMapping(value = "/board/editok", method = RequestMethod.POST)
+    public String editOK(TeamMemberVO vo) {
+        int i = teamMemberDAO.updateTeamMember(vo);
+        if (i == 0)
             System.out.println("데이터 수정 실패");
-        } else {
+        else
             System.out.println("데이터 수정 성공!!!");
-        }
         return "redirect:list";
     }
 
-    @GetMapping("/delete/{id}")
+    @RequestMapping(value = "/board/delete/{id}", method = RequestMethod.GET)
     public String deletePost(@PathVariable("id") int id) {
-        teammemberDAO.deleteTeamMember(id);
+        teamMemberDAO.deleteTeamMember(id);
         return "redirect:../list";
     }
 
-    @GetMapping("/view/{id}")
+    @RequestMapping(value = "/board/view/{id}", method = RequestMethod.GET)
     public String viewPost(@PathVariable("id") int id, Model model) {
-        TeamMemberVO teamMemberVO = teammemberDAO.getTeamMember(id);
+        TeamMemberVO teamMemberVO = teamMemberDAO.getTeamMember(id);
         model.addAttribute("teamMemberVO", teamMemberVO);
         return "view";
     }

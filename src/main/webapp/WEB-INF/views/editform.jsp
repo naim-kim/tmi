@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
-<%@ page import="com.example.board.TeamMemberVO" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
@@ -83,15 +83,16 @@
 
 <h1>Edit Form</h1>
 <div>
-	<%--@elvariable id="teammemberVO" type=""--%>
-	<form:form modelAttribute="teammemberVO" method="POST" action="../editok">
+	<%--@elvariable id="teamMemberVO" type=""--%>
+	<form:form modelAttribute="teamMemberVO" method="POST" action="../editok">
 		<form:hidden path="seq"/>
 		<table id="edit">
 			<tr><td>이름</td><td><form:input path="name" /></td></tr>
 			<tr><td>학번</td><td><form:input path="studentID" /></td></tr>
-			<tr><td>생일</td><td><form:input path="birthday" /></td></tr>
+			<tr><td>학번</td><td><form:input path="semester" /></td></tr>
 			<tr><td>전공</td><td><form:input path="major" /></td></tr>
-			<tr><td>MBTI</td><td><form:input path="mbti" /></td></tr>
+			<tr><td>생일</td><td><form:input path="birthday" /></td></tr>
+			<tr><td>MBTI</td><td><form:input path="MBTI" /></td></tr>
 		</table>
 		<button class="goback" type="button" onclick="history.back()">Go Back</button>
 		<button class="edit-button" type="submit">Edit</button>

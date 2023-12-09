@@ -16,8 +16,8 @@ public class TeamMemberDAO {
         this.template = template;
     }
 
-    private final String TeamMembers_INSERT = "INSERT INTO TeamMembers (Picture, Name, StudentID, Semester, Birthday, Major, MBTI) VALUES (?,?,?,?,?,?,?)";
-    private final String TeamMembers_UPDATE = "UPDATE TeamMembers SET Picture=?, Name=?, StudentID=?, Semester=?, Birthday=?, Major=?, MBTI=? WHERE seq=?";
+    private final String TeamMembers_INSERT = "INSERT INTO TeamMembers (Picture, Name, StudentID, Semester, Major, Birthday, MBTI) VALUES (?,?,?,?,?,?,?)";
+    private final String TeamMembers_UPDATE = "UPDATE TeamMembers SET Picture=?, Name=?, StudentID=?, Semester=?, Major=?, Birthday=?, MBTI=? WHERE seq=?";
     private final String TeamMembers_DELETE = "DELETE FROM TeamMembers WHERE seq=?";
     private final String TeamMembers_GET = "SELECT * FROM TeamMembers WHERE seq=?";
     private final String TeamMembers_LIST = "SELECT * FROM TeamMembers ORDER BY seq DESC";
@@ -48,9 +48,10 @@ public class TeamMemberDAO {
                 data.setName(rs.getString("Name"));
                 data.setStudentID(rs.getString("StudentID"));
                 data.setSemester(rs.getInt("Semester"));
-                data.setBirthday(rs.getDate("Birthday"));
                 data.setMajor(rs.getString("Major"));
+                data.setBirthday(rs.getDate("Birthday"));
                 data.setMBTI(rs.getString("MBTI"));
+                data.setRegdate(rs.getDate("regdate"));
                 return data;
             }
         });

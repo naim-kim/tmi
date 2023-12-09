@@ -4,13 +4,14 @@ import java.util.Date;
 
 public class TeamMemberVO {
     private int seq;
-    private String picture;  // Updated attribute for the "Picture" column
+    private String picture;
     private String name;
-    private String studentID;  // Updated attribute for the "StudentID" column
+    private String studentID;
     private int semester;
-    private Date birthday;
     private String major;
-    private String MBTI;  // Added attribute for the "MBTI" column
+    private Date birthday;
+    private String MBTI;
+    private Date regdate;
 
     public int getSeq() {
         return seq;
@@ -76,5 +77,13 @@ public class TeamMemberVO {
         this.MBTI = MBTI;
     }
 
+    public Date getRegdate() {
+
+        return regdate;
+    }
+    public void setRegdate(Date regdate) {
+
+        this.regdate = regdate;
+    }
 
 }

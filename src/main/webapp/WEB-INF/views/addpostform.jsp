@@ -73,8 +73,9 @@
     <table id="edit">
         <tr><td>이름:</td><td><input type="text" name="name" required/></td></tr>
         <tr><td>학번:</td><td><input type="text" name="studentID" required/></td></tr>
-        <tr><td>생일:</td><td><input type="text" name="birthday" placeholder="YYYY-MM-DD" required/></td></tr>
+        <tr><td>학기수:</td><td><input type="text" name="semester" required/></td></tr>
         <tr><td>전공:</td><td><input type="text" name="major" required/></td></tr>
+        <tr><td>생일:</td><td><input type="text" name="birthday" placeholder="YYYY-MM-DD" required/></td></tr>
         <tr><td>MBTI:</td><td><input type="text" name="MBTI" required/></td></tr>
     </table>
     <button type="button" onclick="location.href='list'">Go Back</button>
