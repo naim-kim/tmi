@@ -5,6 +5,6 @@
     <title>Index Page</title>
 </head>
 <body>
-<h1>hello</h1>
+<jsp:forward page="posts.jsp" />
 </body>
 </html>
