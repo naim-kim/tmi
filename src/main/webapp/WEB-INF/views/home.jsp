@@ -45,5 +45,8 @@
     <p>
         <button class="button" onclick="location.href='board/list'"> 팀 명단 확인하러가기 </button>
     </p>
+	<br><br>
+
+<br/>
 </body>
 </html>

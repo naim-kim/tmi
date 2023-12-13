@@ -147,7 +147,7 @@
 			</tr>
 
 			<tr><td>semester:</td><td><form:input path="semester" /></td></tr>
-			<<tr><td>MBTI:</td><td>
+			<tr><td>MBTI:</td><td>
 			<label>
 				<form:input path="MBTI" list="mbtiOptions" required="true"/>
 			</label>

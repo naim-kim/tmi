@@ -35,7 +35,7 @@
 	header {
 		background-color: #98cfe9;
 		color: #fff;
-		text-align: left;
+		text-align: center;
 		padding: 20px;
 	}
 
@@ -66,40 +66,7 @@
 		margin: 20px;
 	}
 
-	/*
-    #edit {
-        width: 50%;
-        margin-top: 20px;
-    }
-
-    #edit td {
-        padding: 8px;
-    }
-
-    input[type="submit"], input[type="button"] {
-        background-color: #006bb3;
-        color: white;
-        padding: 8px;
-        border: none;
-        cursor: pointer;
-    }
-
-    input[type="submit"]:hover, input[type="button"]:hover {
-        background-color: #005493;
-    }
-
-    a {
-        text-decoration: none;
-        color: #006bb3;
-    }
-
-    a:hover {
-        text-decoration: underline;
-        color: #005493;
-    }
-    */
-
-	/* profiles list */
+	/*profiles list */
 	.profile-grid {
 		height: 90%;
 		display: grid;
@@ -153,6 +120,22 @@
 		opacity: 1;
 		transition: opacity 0.3s ease;
 	}
+
+
+	button {
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: #ffffff;
+		color: #333333;
+		text-decoration: none;
+		border: none;
+		transition: background-color 0.3s ease;
+	}
+
+	button:hover {
+		background-color: #3a5867;
+		color: #fff;
+	}
 </style>
 <script>
 	function delete_ok(id){
@@ -164,9 +147,9 @@
 <body>
 <header>
 	<h1 class="home-title">TMI ( Team 모임은 이거지 )</h1>
-
+	<button type="button" onclick="location.href='add'">Add</button>
 </header>
-<button type="button" onclick="location.href='add'">Add</button>
+
 
 <%--
 	<table id="list" width="90%">
@@ -192,7 +175,7 @@
 		<td><a href="view/${u.seq}">View</a></td>
 		<td><a href="editpost/${u.seq}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
-	</tr>
+	</tr>/board
 </c:forEach>
 </table>
 <br/>
