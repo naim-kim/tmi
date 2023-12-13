@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8"><title>Members List</title>
+	<meta charset="UTF-8"><title>TMI Main Page</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 <style>
 	/* style.css */
@@ -136,35 +136,80 @@
 		background-color: #3a5867;
 		color: #fff;
 	}
+	#list {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		border-collapse: collapse;
+		width: 95%;
+		margin: auto;
+
+	}
+	#list td, #list th {
+		border: 1px solid #ddd;
+		padding: 8px;
+		text-align:center;
+	}
+	#list tr:nth-child(even){background-color: #f2f2f2;}
+	#list tr:hover {background-color: #ddd;}
+	#list th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: center;
+		background-color: #3a5867;
+		color: white;
+	}
+	div {
+		text-align: left;
+	}
+	.member {
+		margin: 15px;
+	}
 </style>
 <script>
 	function delete_ok(id){
 		var a = confirm("정말로 삭제하겠습니까?");
-		if(a) location.href='delete/' + id;
+		if(a) location.href='team/activitydelete/' + id;
 	}
 </script>
 </head>
 <body>
 <header>
-	<h1 class="home-title">TMI ( Team 모임은 이거지 )</h1>
-	<button type="button" onclick="location.href='memberadd'">Add</button>
+	<h1 class="home-title">TMI (팀 모임은 이거지)</h1>
+
 </header>
+<button class="member" onclick="location.href='team/memberslist'"> 팀 명단 확인하러가기 </button>
+<div>
+	<h3>
+		Weekly Activities
+		<button type="button" onclick="location.href='team/activityadd'">Add</button>
+	</h3>
 
-
-
-<div class="profile-grid">
-
-	<c:forEach items="${memberslist}" var="u" varStatus="status">
-		<div class="profile-items">
-			<a href="memberview/${u.seq}">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/512px-Windows_10_Default_Profile_Picture.svg.png?20221210150350" alt="My Profile Pic">
-				<div class="overlay">
-					<div class="profile-title">${u.name}</div>
-				</div>
-			</a>
-		</div>
+<table id="list">
+	<tr>
+		<th>ID</th>
+		<th>Title</th>
+		<th>Week</th>
+		<th>Details</th>
+		<th>Input Date</th>
+		<th>View</th>
+		<th>Edit</th>
+		<th>Delete</th>
+	</tr>
+	<c:forEach items="${TMI_home}" var="u" varStatus="status">
+		<tr>
+			<td>${status.index + 1}</td>
+			<td>${u.title}</td>
+			<td>${u.week}</td>
+			<td>${u.details}</td>
+			<td>${u.regdate}</td>
+			<td><a href="team/activityview/${u.seq}">View</a></td>
+			<td><a href="team/activityedit/${u.seq}">Edit</a></td>
+			<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
+		</tr>
 	</c:forEach>
+</table>
 </div>
+
+<br/>
 
 </body>
 </html>

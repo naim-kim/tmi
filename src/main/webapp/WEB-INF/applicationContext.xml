@@ -15,4 +15,7 @@
     <bean id="dao" class="com.example.board.TeamMemberDAO" >
         <property name="template" ref="jt" />
     </bean>
+    <bean id="ativitydao" class="com.example.board.ActivityDAO" >
+        <property name="template" ref="jt" />
+    </bean>
 </beans>

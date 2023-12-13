@@ -67,9 +67,8 @@
 </head>
 <body>
 
-
 <h1>Add New Post</h1>
-<form action="addok" method="post">
+<form action="memberaddok" method="post">
     <table id="edit">
         <tr><td>이름:</td><td>
             <label>
@@ -140,7 +139,7 @@
                 </datalist>
             </label></td></tr>
     </table>
-    <button type="button" onclick="location.href='list'">Go Back</button>
+    <button type="button" onclick="location.href='memberslist'">Go Back</button>
     <button type="submit">Add</button>
 </form>
 

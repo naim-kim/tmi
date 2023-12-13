@@ -1,13 +1,12 @@
-<jsp:useBean id="boardVO" scope="request" type="com.example.board.TeamMemberVO"/>
+<jsp:useBean id="activityVO" scope="request" type="com.example.board.ActivityVO"/>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
-<%@ page import="com.example.board.TeamMemberVO" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>View Team Member</title>
+    <title>View Activity</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
 
@@ -73,37 +72,15 @@
     </style>
 </head>
 <body>
-
-<h1>View Board</h1>
+<h1>View Activity</h1>
 <div>
-    <table>
-        <tr><td>이름</td><td>${boardVO.name}</td></tr>
-        <tr><td>학번</td><td>${boardVO.studentID}</td></tr>
-        <tr><td>연락쳐</td><td>${boardVO.phonenum}</td></tr>
-        <tr><td>학부</td><td>${boardVO.major}</td></tr>
-        <tr><td>semester</td><td>${boardVO.semester}</td></tr>
-        <tr><td>MBTI</td><td>${boardVO.MBTI}</td></tr>
+    <table id="TMI_home">
+        <tr><td>title</td><td>${activityVO.title}</td></tr>
+        <tr><td>week</td><td>${activityVO.week}</td></tr>
+        <tr><td>details</td><td>${activityVO.details}</td></tr>
     </table>
-    <button class="goback" type="button" onclick="location.href='../list'">Go Back</button>
-    <button type="button" onclick="location.href='../editpost/${boardVO.seq}'">Edit</button>
+    <button class="goback" type="button" onclick="location.href='/tmi_war_exploded/team'">Go Back</button>
+    <button type="button" onclick="location.href='../activityedit/${activityVO.seq}'">Edit</button>
 </div>
-
-
-
-<%--
-<h1>View Team Member</h1>
-<div>
-    <table>
-        <tr><td>이름</td><td>${teamMemberVO.name}</td></tr>
-        <tr><td>학번</td><td>${teamMemberVO.studentID}</td></tr>
-        <tr><td>현학기수</td><td>${teamMemberVO.semester}</td></tr>
-        <tr><td>학부</td><td>${teamMemberVO.major}</td></tr>
-        <tr><td>생일</td><td>${teamMemberVO.birthday}</td></tr>
-        <tr><td>MBTI</td><td>${teamMemberVO.MBTI}</td></tr>
-    </table>
-    <button class="goback" type="button" onclick="location.href='../list'">Go Back</button>
-    <button type="button" onclick="location.href='../editpost/${teamMemberVO.seq}'">Edit</button>
-</div>
---%>
 </body>
 </html>

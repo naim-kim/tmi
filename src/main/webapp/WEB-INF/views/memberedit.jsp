@@ -80,12 +80,11 @@
 	</style>
 </head>
 <body>
-
 <h1>Edit Form</h1>
 
 <%--@elvariable id="boardVO" type=""--%>
 <div>
-	<form:form modelAttribute="boardVO" method="POST" action="../editok">
+	<form:form modelAttribute="boardVO" method="POST" action="../membereditok">
 		<form:hidden path="seq"/>
 		<table id="edit">
 			<tr><td>이름:</td><td><form:input path="name" /></td></tr>

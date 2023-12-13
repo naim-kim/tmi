@@ -4,17 +4,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Date;
 
 @Controller
 public class HomeController {
 
+    @Autowired
+    ActivityDAO activityDAO;
 
-    @RequestMapping("/")
+    @RequestMapping(value = "/")
     public String home(Model model) {
+        // Redirect to /team as the default entry point
+        return "redirect:/team";
+    }
+
+    @RequestMapping(value = "/team")
+    public String team(Model model) {
         String serverTime = new Date().toString();
         model.addAttribute("serverTime", serverTime);
+
+        // Get the list of activities from the database
+        model.addAttribute("TMI_home", activityDAO.getActivityList());
+
         return "home";
     }
 }
