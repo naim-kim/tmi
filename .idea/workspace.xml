@@ -9,13 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34b7f74f-8e00-4fe0-b5fb-1d769907d7a1" name="Changes" comment="new sql table created + view page done">
+    <list default="true" id="34b7f74f-8e00-4fe0-b5fb-1d769907d7a1" name="Changes" comment="controller edited&#10;+ regdate added to table &#10;!! need to fix 404 error">
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/posts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/posts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/view.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +36,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;naim-kim&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="7111600a-1d5d-46df-9196-1efe2267adc5" />
+        <option name="url" value="https://github.com/naim-kim/tmi.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -56,14 +77,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/tmi/src/main/webapp/WEB-INF/views/css",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/tmi/src/main/java/com/example/board",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.28045976",
+    "settings.editor.selected.configurable": "project.scopes",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -74,6 +97,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\tmi\src\main\java\com\example\board" />
       <recent name="C:\Users\User\IdeaProjects\tmi\src\main\webapp\WEB-INF\views\css" />
       <recent name="C:\Users\User\IdeaProjects\tmi\src\main\webapp\WEB-INF\views" />
     </key>
@@ -174,6 +198,9 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="34b7f74f-8e00-4fe0-b5fb-1d769907d7a1" name="Changes" comment="" />
@@ -182,7 +209,9 @@
       <option name="presentableId" value="Default" />
       <updated>1702108089960</updated>
       <workItem from="1702108090973" duration="2000" />
-      <workItem from="1702118243453" duration="13163000" />
+      <workItem from="1702118243453" duration="13281000" />
+      <workItem from="1702195689359" duration="5189000" />
+      <workItem from="1702352953362" duration="9379000" />
     </task>
     <task id="LOCAL-00001" summary="maven depenendcies + xml files added">
       <option name="closed" value="true" />
@@ -208,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702143639260</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="controller edited&#10;+ regdate added to table &#10;!! need to fix 404 error">
+      <option name="closed" value="true" />
+      <created>1702146971291</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702146971291</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +255,18 @@
     <MESSAGE value="maven depenendcies + xml files added" />
     <MESSAGE value="posts edited ( 프사 동그라미 )" />
     <MESSAGE value="new sql table created + view page done" />
-    <option name="LAST_COMMIT_MESSAGE" value="new sql table created + view page done" />
+    <MESSAGE value="controller edited&#10;+ regdate added to table &#10;!! need to fix 404 error" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller edited&#10;+ regdate added to table &#10;!! need to fix 404 error" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/board/TeamMemberController.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

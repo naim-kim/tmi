@@ -1,4 +1,4 @@
-<jsp:useBean id="teamMemberVO" scope="request" type="com.example.board.TeamMemberVO"/>
+<jsp:useBean id="boardVO" scope="request" type="com.example.board.TeamMemberVO"/>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ page import="com.example.board.TeamMemberVO" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -74,6 +74,23 @@
 </head>
 <body>
 
+<h1>View Board</h1>
+<div>
+    <table>
+        <tr><td>이름</td><td>${boardVO.name}</td></tr>
+        <tr><td>학번</td><td>${boardVO.studentID}</td></tr>
+        <tr><td>연락쳐</td><td>${boardVO.phonenum}</td></tr>
+        <tr><td>학부</td><td>${boardVO.major}</td></tr>
+        <tr><td>semester</td><td>${boardVO.semester}</td></tr>
+        <tr><td>MBTI</td><td>${boardVO.MBTI}</td></tr>
+    </table>
+    <button class="goback" type="button" onclick="location.href='../list'">Go Back</button>
+    <button type="button" onclick="location.href='../editpost/${boardVO.seq}'">Edit</button>
+</div>
+
+
+
+<%--
 <h1>View Team Member</h1>
 <div>
     <table>
@@ -87,6 +104,6 @@
     <button class="goback" type="button" onclick="location.href='../list'">Go Back</button>
     <button type="button" onclick="location.href='../editpost/${teamMemberVO.seq}'">Edit</button>
 </div>
-
+--%>
 </body>
 </html>

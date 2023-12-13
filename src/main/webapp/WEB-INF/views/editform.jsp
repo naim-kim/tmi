@@ -82,21 +82,22 @@
 <body>
 
 <h1>Edit Form</h1>
+
+<%--@elvariable id="boardVO" type=""--%>
 <div>
-	<%--@elvariable id="teamMemberVO" type=""--%>
-	<form:form modelAttribute="teamMemberVO" method="POST" action="../editok">
+	<form:form modelAttribute="boardVO" method="POST" action="../editok">
 		<form:hidden path="seq"/>
-		<table id="edit">
-			<tr><td>이름</td><td><form:input path="name" /></td></tr>
-			<tr><td>학번</td><td><form:input path="studentID" /></td></tr>
-			<tr><td>학번</td><td><form:input path="semester" /></td></tr>
-			<tr><td>전공</td><td><form:input path="major" /></td></tr>
-			<tr><td>생일</td><td><form:input path="birthday" /></td></tr>
-			<tr><td>MBTI</td><td><form:input path="MBTI" /></td></tr>
-		</table>
-		<button class="goback" type="button" onclick="history.back()">Go Back</button>
-		<button class="edit-button" type="submit">Edit</button>
+	<table id="edit">
+		<tr><td>이름</td><td><form:input path="name" /></td></tr>
+		<tr><td>학번</td><td><form:input path="studentID" /></td></tr>
+		<tr><td>연락처</td><td><form:input path="phonenum" /></td></tr>
+		<tr><td>학부</td><td><form:input path="major" /></td></tr>
+		<tr><td>semester</td><td><form:input path="semester" /></td></tr>
+		<tr><td>MBTI</td><td><form:input path="MBTI" /></td></tr>
+	</table>
+	<button class="goback" type="button" onclick=history.back()>Go Back</button>
+	<button class="edit-button" type="submit">Edit</button>
 	</form:form>
-</div>
+
 </body>
 </html>

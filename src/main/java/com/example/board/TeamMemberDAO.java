@@ -16,41 +16,38 @@ public class TeamMemberDAO {
         this.template = template;
     }
 
-    private final String TeamMembers_INSERT = "INSERT INTO TeamMembers (Picture, Name, StudentID, Semester, Major, Birthday, MBTI) VALUES (?,?,?,?,?,?,?)";
-    private final String TeamMembers_UPDATE = "UPDATE TeamMembers SET Picture=?, Name=?, StudentID=?, Semester=?, Major=?, Birthday=?, MBTI=? WHERE seq=?";
-    private final String TeamMembers_DELETE = "DELETE FROM TeamMembers WHERE seq=?";
-    private final String TeamMembers_GET = "SELECT * FROM TeamMembers WHERE seq=?";
-    private final String TeamMembers_LIST = "SELECT * FROM TeamMembers ORDER BY seq DESC";
-
-    public int insertTeamMember(TeamMemberVO vo) {
-        return template.update(TeamMembers_INSERT, new Object[]{vo.getPicture(), vo.getName(), vo.getStudentID(), vo.getSemester(), vo.getBirthday(), vo.getMajor(), vo.getMBTI()});
+    public int insertBoard(TeamMemberVO vo) {
+        String MEMBER_INSERT = "insert into TeamMembers (name, studentID, phonenum, major, semester, mbti) values (?,?,?,?,?,?)";
+        return template.update(MEMBER_INSERT, vo.getName(), vo.getStudentID(), vo.getPhonenum(), vo.getMajor(),vo.getSemester(), vo.getMBTI());
     }
-
-    public int deleteTeamMember(int seq) {
-        return template.update(TeamMembers_DELETE, new Object[]{seq});
+    public void deleteBoard(int id) {
+        String MEMBER_DELETE = "delete from TeamMembers where seq=?";
+        template.update(MEMBER_DELETE, id);
     }
-
-    public int updateTeamMember(TeamMemberVO vo) {
-        return template.update(TeamMembers_UPDATE, new Object[]{vo.getPicture(), vo.getName(), vo.getStudentID(), vo.getSemester(), vo.getBirthday(), vo.getMajor(), vo.getMBTI(), vo.getSeq()});
+    public int updateBoard(TeamMemberVO vo) {
+        String MEMBER_UPDATE = "update TeamMembers set name=?, studentID=?, phonenum=?, major=?, semester=?,mbti=? where seq=?";
+        return template.update(MEMBER_UPDATE, vo.getName(), vo.getStudentID(), vo.getPhonenum(), vo.getMajor(), vo.getSemester(), vo.getMBTI(), vo.getSeq());
     }
-
-    public TeamMemberVO getTeamMember(int seq) {
-        return template.queryForObject(TeamMembers_GET, new Object[]{seq}, new BeanPropertyRowMapper<>(TeamMemberVO.class));
+    public TeamMemberVO getBoard(int seq) {
+        String MEMBER_GET = "select * from TeamMembers where seq=?";
+        return template.queryForObject(MEMBER_GET,
+                new Object[] {seq},
+                new BeanPropertyRowMapper<>(TeamMemberVO.class));
     }
+    public List<TeamMemberVO> getBoardList() {
+        String MEMBER_LIST = "select * from TeamMembers order by seq desc";
+        return template.query(MEMBER_LIST, new RowMapper<TeamMemberVO>() {
 
-    public List<TeamMemberVO> getTeamMemberList() {
-        return template.query(TeamMembers_LIST, new RowMapper<TeamMemberVO>() {
             @Override
             public TeamMemberVO mapRow(ResultSet rs, int rowNum) throws SQLException {
                 TeamMemberVO data = new TeamMemberVO();
                 data.setSeq(rs.getInt("seq"));
-                data.setPicture(rs.getString("Picture"));
-                data.setName(rs.getString("Name"));
-                data.setStudentID(rs.getString("StudentID"));
-                data.setSemester(rs.getInt("Semester"));
-                data.setMajor(rs.getString("Major"));
-                data.setBirthday(rs.getDate("Birthday"));
-                data.setMBTI(rs.getString("MBTI"));
+                data.setName(rs.getString("name"));
+                data.setStudentID(rs.getString("studentID"));
+                data.setPhonenum(rs.getString("phonenum"));
+                data.setMajor(rs.getString("major"));
+                data.setSemester(rs.getInt("semester"));
+                data.setMBTI(rs.getString("mbti"));
                 data.setRegdate(rs.getDate("regdate"));
                 return data;
             }

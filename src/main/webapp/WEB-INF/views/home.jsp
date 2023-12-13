@@ -37,13 +37,13 @@
     </style>
 </head>
 <body>
-    <h1>Hello! </h1>
+    <h1>ㅇㅇㅇ팀!</h1>
+    <p>현재 시각: [ ${serverTime} ]</p>
     <br>
-    <h3>현재 시각: [ ${serverTime} ]
-        <br>최대한 빨리 정보 입력해주세요 ❤️ </h3>
+    <h3></h3>
     <br>
     <p>
-        <button class="button" onclick="location.href='board/list'">24-1하기 활동희망 동아리 명단</button>
+        <button class="button" onclick="location.href='board/list'"> 팀 명단 확인하러가기 </button>
     </p>
 </body>
 </html>

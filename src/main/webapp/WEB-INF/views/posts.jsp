@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
-<%@page import="com.example.board.TeamMemberDAO, com.example.board.TeamMemberVO,java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
@@ -60,7 +59,7 @@
 	}
 
 
-	h2.sub {
+	h2 {
 		font-family: "SamlipBasic", sans-serif;
 		font-size: 30px;
 		text-align: center;
@@ -186,7 +185,7 @@
 	<tr>
 		<td>${status.index+1}</td>
 		<td>${u.name}</td>
-		<td>${u.studentnum}</td>
+		<td>${u.studentID}</td>
 		<td>${u.phonenum}</td>
 		<td>${u.major}</td>
 		<td>${u.regdate}</td>
@@ -200,7 +199,7 @@
 --%>
 <div class="profile-grid">
 
-	<c:forEach items="${list}" var="u" varStatus="loop">
+	<c:forEach items="${list}" var="u" varStatus="status">
 		<div class="profile-items">
 			<a href="view/${u.seq}">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Windows_10_Default_Profile_Picture.svg/512px-Windows_10_Default_Profile_Picture.svg.png?20221210150350" alt="My Profile Pic">
@@ -211,5 +210,6 @@
 		</div>
 	</c:forEach>
 </div>
+
 </body>
 </html>

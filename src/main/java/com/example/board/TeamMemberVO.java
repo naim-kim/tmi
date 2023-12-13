@@ -1,79 +1,72 @@
 package com.example.board;
 
 import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class TeamMemberVO {
     private int seq;
-    private String picture;
     private String name;
     private String studentID;
-    private int semester;
+    private String phonenum;
     private String major;
-    private Date birthday;
+    private int semester;
     private String MBTI;
     private Date regdate;
 
     public int getSeq() {
         return seq;
     }
-
     public void setSeq(int seq) {
         this.seq = seq;
     }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getStudentID() {
+
         return studentID;
     }
-
     public void setStudentID(String studentID) {
+
         this.studentID = studentID;
+    }
+
+    public String getPhonenum() {
+
+        return phonenum;
+    }
+    public void setPhonenum(String phonenum) {
+        this.phonenum = phonenum;
+    }
+
+    public String getMajor() {
+
+        return major;
+    }
+    public void setMajor(String content) {
+
+        this.major = content;
     }
 
     public int getSemester() {
         return semester;
     }
-
     public void setSemester(int semester) {
+
         this.semester = semester;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getMajor() {
-        return major;
-    }
-
-    public void setMajor(String major) {
-        this.major = major;
     }
 
     public String getMBTI() {
         return MBTI;
     }
-
     public void setMBTI(String MBTI) {
+
         this.MBTI = MBTI;
     }
 
