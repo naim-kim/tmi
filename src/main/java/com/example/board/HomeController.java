@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Date;
 
@@ -15,7 +14,7 @@ public class HomeController {
     ActivityDAO activityDAO;
 
     @RequestMapping(value = "/")
-    public String home(Model model) {
+    public String home() {
         // Redirect to /team as the default entry point
         return "redirect:/team";
     }

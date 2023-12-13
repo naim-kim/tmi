@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
@@ -37,18 +37,6 @@
 		color: #fff;
 		text-align: center;
 		padding: 20px;
-	}
-
-	.page-title, .home-title {
-		font-family: 'SamlipOutline', sans-serif;
-		font-size: 50px;
-		text-align: center;
-		margin: 20px;
-	}
-
-	.page-title:hover {
-		cursor: default;
-		color: #3a5867;
 	}
 
 	main {
@@ -139,7 +127,7 @@
 </style>
 <script>
 	function delete_ok(id){
-		var a = confirm("정말로 삭제하겠습니까?");
+		const a = confirm("정말로 삭제하겠습니까?");
 		if(a) location.href='delete/' + id;
 	}
 </script>

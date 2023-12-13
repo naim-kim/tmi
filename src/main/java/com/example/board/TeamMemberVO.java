@@ -1,8 +1,6 @@
 package com.example.board;
 
 import java.util.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 public class TeamMemberVO {
     private int seq;
