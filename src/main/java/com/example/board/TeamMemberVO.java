@@ -9,7 +9,9 @@ public class TeamMemberVO {
     private String phonenum;
     private String major;
     private int semester;
+private String birthday;
     private String MBTI;
+private String comment;
     private Date regdate;
 
     public int getSeq() {
@@ -60,12 +62,28 @@ public class TeamMemberVO {
         this.semester = semester;
     }
 
+    public String getBirthday() {
+        return birthday;
+    }
+    public void setBirthday(String birthday) {
+
+        this.birthday = birthday;
+    }
+
     public String getMBTI() {
         return MBTI;
     }
     public void setMBTI(String MBTI) {
 
         this.MBTI = MBTI;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+    public void setComment(String comment) {
+
+        this.comment = comment;
     }
 
     public Date getRegdate() {

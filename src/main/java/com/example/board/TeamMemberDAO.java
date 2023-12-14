@@ -17,8 +17,8 @@ public class TeamMemberDAO {
     }
 
     public int insertBoard(TeamMemberVO vo) {
-        String MEMBER_INSERT = "insert into TeamMembers (name, studentID, phonenum, major, semester, mbti) values (?,?,?,?,?,?)";
-        return template.update(MEMBER_INSERT, vo.getName(), vo.getStudentID(), vo.getPhonenum(), vo.getMajor(), vo.getSemester(), vo.getMBTI());
+        String MEMBER_INSERT = "insert into TeamMembers (name, studentID, phonenum, major, semester, birthday, mbti, comment) values (?,?,?,?,?,?,?,?)";
+        return template.update(MEMBER_INSERT, vo.getName(), vo.getStudentID(), vo.getPhonenum(), vo.getMajor(), vo.getSemester(), vo.getBirthday(), vo.getMBTI(), vo.getComment());
     }
 
     public void deleteBoard(int id) {
@@ -27,8 +27,8 @@ public class TeamMemberDAO {
     }
 
     public int updateBoard(TeamMemberVO vo) {
-        String MEMBER_UPDATE = "update TeamMembers set name=?, studentID=?, phonenum=?, major=?, semester=?,mbti=? where seq=?";
-        return template.update(MEMBER_UPDATE, vo.getName(), vo.getStudentID(), vo.getPhonenum(), vo.getMajor(), vo.getSemester(), vo.getMBTI(), vo.getSeq());
+        String MEMBER_UPDATE = "update TeamMembers set name=?, studentID=?, phonenum=?, major=?, semester=?, birthday=?, mbti=?, comment=? where seq=?";
+        return template.update(MEMBER_UPDATE, vo.getName(), vo.getStudentID(), vo.getPhonenum(), vo.getMajor(), vo.getSemester(), vo.getBirthday(), vo.getMBTI(), vo.getComment(), vo.getSeq());
     }
 
     public TeamMemberVO getBoard(int seq) {
@@ -51,7 +51,9 @@ public class TeamMemberDAO {
                 data.setPhonenum(rs.getString("phonenum"));
                 data.setMajor(rs.getString("major"));
                 data.setSemester(rs.getInt("semester"));
+                data.setBirthday(rs.getString("birthday"));
                 data.setMBTI(rs.getString("mbti"));
+                data.setComment(rs.getString("comment"));
                 data.setRegdate(rs.getDate("regdate"));
                 return data;
             }

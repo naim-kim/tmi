@@ -115,6 +115,10 @@
             <label>
             <input type="number" name="semester" min="1" required/>
         </label></td></tr>
+        <tr><td>birthday:</td><td>
+            <label>
+                <input type="date" name="birthday" required/>
+            </label></td></tr>
         <tr><td>MBTI:</td><td>
             <label>
                 <input list="mbtiOptions" name="MBTI" required>
@@ -137,6 +141,15 @@
                     <option value="ENTJ">ENTJ</option>
                 </datalist>
             </label></td></tr>
+        <tr>
+            <td>comment:</td>
+            <td>
+                <label>
+                    <textarea name="comment" required></textarea>
+                </label>
+            </td>
+        </tr>
+
     </table>
     <button type="button" onclick="location.href='memberslist'">Go Back</button>
     <button type="submit">Add</button>

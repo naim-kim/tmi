@@ -145,6 +145,10 @@
 			</tr>
 
 			<tr><td>semester:</td><td><form:input path="semester" /></td></tr>
+			<tr>
+				<td>birthday:</td>
+				<td><label><form:input type="date" path="birthday" required="true" /></label></td>
+			</tr>
 			<tr><td>MBTI:</td><td>
 			<label>
 				<form:input path="MBTI" list="mbtiOptions" required="true"/>
@@ -168,6 +172,15 @@
 					<option value="ENTJ"></option>
 				</datalist>
 			</td></tr>
+			<tr>
+				<td>comment:</td>
+				<td>
+					<label>
+						<form:input type="text" path="comment" required="true" />
+					</label>
+				</td>
+			</tr>
+
 		</table>
 		<button class="goback" type="button" onclick=history.back()>Go Back</button>
 		<button class="edit-button" type="submit">Edit</button>
