@@ -1,9 +1,14 @@
 package com.example.board;
 
+import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public class TeamMemberDAO extends SqlSessionDaoSupport implements TeamMemberMapper {
 
     @Override
