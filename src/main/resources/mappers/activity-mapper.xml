@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.board.ActivityMapper">
+
+    <!-- Insert Query -->
+    <insert id="insertActivity" parameterType="com.example.board.ActivityVO">
+        insert into WeeklyActivities (title, week, details) values (#{title}, #{week}, #{details})
+    </insert>
+
+    <!-- Delete Query -->
+    <delete id="deleteActivity" parameterType="int">
+        delete from WeeklyActivities where seq=#{seq}
+    </delete>
+
+    <!-- Update Query -->
+    <update id="updateActivity" parameterType="com.example.board.ActivityVO">
+        update WeeklyActivities set title=#{title}, week=#{week}, details=#{details} where seq=#{seq}
+    </update>
+
+    <!-- Select Query by ID -->
+    <select id="getActivity" parameterType="int" resultType="com.example.board.ActivityVO">
+        select * from WeeklyActivities where seq=#{seq}
+    </select>
+
+    <!-- Select All Query -->
+    <select id="getActivityList" resultType="com.example.board.ActivityVO">
+        select * from WeeklyActivities order by seq desc
+    </select>
+
+</mapper>

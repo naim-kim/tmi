@@ -1,61 +1,33 @@
 package com.example.board;
 
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
-public class TeamMemberDAO {
+public class TeamMemberDAO extends SqlSessionDaoSupport implements TeamMemberMapper {
 
-    private JdbcTemplate template;
-
-    public void setTemplate(JdbcTemplate template) {
-        this.template = template;
-    }
-
+    @Override
     public int insertBoard(TeamMemberVO vo) {
-        String MEMBER_INSERT = "insert into TeamMembers (name, studentID, phonenum, major, semester, mbti) values (?,?,?,?,?,?)";
-        return template.update(MEMBER_INSERT, vo.getName(), vo.getStudentID(), vo.getPhonenum(), vo.getMajor(), vo.getSemester(), vo.getMBTI());
+        return getSqlSession().insert("insertBoard", vo);
     }
 
-    public void deleteBoard(int id) {
-        String MEMBER_DELETE = "delete from TeamMembers where seq=?";
-        template.update(MEMBER_DELETE, id);
+    @Override
+    public void deleteBoard(int seq) {
+        getSqlSession().delete("deleteBoard", seq);
     }
 
+    @Override
     public int updateBoard(TeamMemberVO vo) {
-        String MEMBER_UPDATE = "update TeamMembers set name=?, studentID=?, phonenum=?, major=?, semester=?,mbti=? where seq=?";
-        return template.update(MEMBER_UPDATE, vo.getName(), vo.getStudentID(), vo.getPhonenum(), vo.getMajor(), vo.getSemester(), vo.getMBTI(), vo.getSeq());
+        return getSqlSession().update("updateBoard", vo);
     }
 
+    @Override
     public TeamMemberVO getBoard(int seq) {
-        String MEMBER_GET = "select * from TeamMembers where seq=?";
-        return template.queryForObject(MEMBER_GET,
-                new Object[]{seq},
-                new BeanPropertyRowMapper<>(TeamMemberVO.class));
+        return getSqlSession().selectOne("getBoard", seq);
     }
 
+    @Override
     public List<TeamMemberVO> getBoardList() {
-        String MEMBER_LIST = "select * from TeamMembers order by seq desc";
-        return template.query(MEMBER_LIST, new RowMapper<TeamMemberVO>() {
-
-            @Override
-            public TeamMemberVO mapRow(ResultSet rs, int rowNum) throws SQLException {
-                TeamMemberVO data = new TeamMemberVO();
-                data.setSeq(rs.getInt("seq"));
-                data.setName(rs.getString("name"));
-                data.setStudentID(rs.getString("studentID"));
-                data.setPhonenum(rs.getString("phonenum"));
-                data.setMajor(rs.getString("major"));
-                data.setSemester(rs.getInt("semester"));
-                data.setMBTI(rs.getString("mbti"));
-                data.setRegdate(rs.getDate("regdate"));
-                return data;
-            }
-        });
+        return getSqlSession().selectList("getBoardList");
     }
-
 }
