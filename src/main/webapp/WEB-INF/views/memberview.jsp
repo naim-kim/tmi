@@ -1,4 +1,4 @@
-<jsp:useBean id="boardVO" scope="request" type="com.example.board.TeamMemberVO"/>
+<jsp:useBean id="boardVO" scope="request" type="com.example.board.vo.TeamMemberVO"/>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 

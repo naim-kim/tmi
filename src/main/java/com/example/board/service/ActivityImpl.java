@@ -1,5 +1,6 @@
-package com.example.board;
+package com.example.board.service;
 
+import com.example.board.vo.ActivityVO;
 import com.example.board.dao.ActivityDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

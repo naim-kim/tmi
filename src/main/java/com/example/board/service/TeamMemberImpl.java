@@ -1,5 +1,6 @@
-package com.example.board;
+package com.example.board.service;
 
+import com.example.board.vo.TeamMemberVO;
 import com.example.board.dao.TeamMemberDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

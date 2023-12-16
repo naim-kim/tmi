@@ -5,7 +5,7 @@
 <mapper namespace="Activity">
 
     <!-- Insert Query -->
-    <insert id="insertActivity" parameterType="com.example.board.ActivityVO">
+    <insert id="insertActivity" parameterType="com.example.board.vo.ActivityVO">
         insert into WeeklyActivities (title, week, details) values (#{title}, #{week}, #{details})
     </insert>
 
@@ -15,17 +15,17 @@
     </delete>
 
     <!-- Update Query -->
-    <update id="updateActivity" parameterType="com.example.board.ActivityVO">
+    <update id="updateActivity" parameterType="com.example.board.vo.ActivityVO">
         update WeeklyActivities set title=#{title}, week=#{week}, details=#{details} where seq=#{seq}
     </update>
 
     <!-- Select Query by ID -->
-    <select id="getActivity" parameterType="int" resultType="com.example.board.ActivityVO">
+    <select id="getActivity" parameterType="int" resultType="com.example.board.vo.ActivityVO">
         select * from WeeklyActivities where seq=#{seq}
     </select>
 
     <!-- Select All Query -->
-    <select id="getActivityList" resultType="com.example.board.ActivityVO">
+    <select id="getActivityList" resultType="com.example.board.vo.ActivityVO">
         select * from WeeklyActivities order by seq desc
     </select>
 

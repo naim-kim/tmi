@@ -2,7 +2,9 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias alias="ActivityVO" type="com.example.board.ActivityVO"/>
-        <typeAlias alias="TeamMemberVO" type="com.example.board.TeamMemberVO"/>
+        <typeAlias alias="ActivityVO" type="com.example.board.vo.ActivityVO"/>
+        <typeAlias alias="TeamMemberVO" type="com.example.board.vo.TeamMemberVO"/>
+        <typeAlias alias="User" type="com.example.board.vo.User"/>
+
     </typeAliases>
 </configuration>

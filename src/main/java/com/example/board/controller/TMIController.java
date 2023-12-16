@@ -1,7 +1,7 @@
 package com.example.board.controller;
 
-import com.example.board.ActivityVO;
-import com.example.board.TeamMemberVO;
+import com.example.board.vo.ActivityVO;
+import com.example.board.vo.TeamMemberVO;
 import com.example.board.dao.ActivityDAO;
 import com.example.board.dao.TeamMemberDAO;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,6 @@
-package com.example.board;
+package com.example.board.service;
+
+import com.example.board.vo.ActivityVO;
 
 import java.util.List;
 

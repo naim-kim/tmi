@@ -1,4 +1,6 @@
-package com.example.board;
+package com.example.board.service;
+
+import com.example.board.vo.TeamMemberVO;
 
 import java.util.List;
 

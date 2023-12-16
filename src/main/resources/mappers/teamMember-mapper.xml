@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="TeamMember">
 
-    <insert id="insertBoard" parameterType="com.example.board.TeamMemberVO">
+    <insert id="insertBoard" parameterType="com.example.board.vo.TeamMemberVO">
         insert into TeamMembers (name, studentID, phonenum, major, semester, mbti)
         values (#{name}, #{studentID}, #{phonenum}, #{major}, #{semester}, #{mbti})
     </insert>
@@ -13,17 +13,17 @@
         delete from TeamMembers where seq=#{seq}
     </delete>
 
-    <update id="updateBoard" parameterType="com.example.board.TeamMemberVO">
+    <update id="updateBoard" parameterType="com.example.board.vo.TeamMemberVO">
         update TeamMembers
         set name=#{name}, studentID=#{studentID}, phonenum=#{phonenum}, major=#{major}, semester=#{semester}, mbti=#{mbti}
         where seq=#{seq}
     </update>
 
-    <select id="getBoard" parameterType="int" resultType="com.example.board.TeamMemberVO">
+    <select id="getBoard" parameterType="int" resultType="com.example.board.vo.TeamMemberVO">
         select * from TeamMembers where seq=#{seq}
     </select>
 
-    <select id="getBoardList" resultType="com.example.board.TeamMemberVO">
+    <select id="getBoardList" resultType="com.example.board.vo.TeamMemberVO">
         select * from TeamMembers order by seq desc
     </select>
 
