@@ -5,8 +5,8 @@
 <mapper namespace="TeamMember">
 
     <insert id="insertBoard" parameterType="com.example.board.vo.TeamMemberVO">
-        insert into TeamMembers (name, studentID, phonenum, major, semester, mbti)
-        values (#{name}, #{studentID}, #{phonenum}, #{major}, #{semester}, #{mbti})
+        insert into TeamMembers (name, studentID, phonenum, major, semester, mbti, comment)
+        values (#{name}, #{studentID}, #{phonenum}, #{major}, #{semester}, #{mbti}, #{comment})
     </insert>
 
     <delete id="deleteBoard" parameterType="int">
@@ -15,7 +15,7 @@
 
     <update id="updateBoard" parameterType="com.example.board.vo.TeamMemberVO">
         update TeamMembers
-        set name=#{name}, studentID=#{studentID}, phonenum=#{phonenum}, major=#{major}, semester=#{semester}, mbti=#{mbti}
+        set name=#{name}, studentID=#{studentID}, phonenum=#{phonenum}, major=#{major}, semester=#{semester}, mbti=#{mbti}, comment=#{comment}
         where seq=#{seq}
     </update>
 

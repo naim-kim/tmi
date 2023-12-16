@@ -121,7 +121,7 @@
             </label></td></tr>
         <tr><td>MBTI:</td><td>
             <label>
-                <input list="mbtiOptions" name="MBTI" required>
+                <input list="mbtiOptions" name="mbti" required>
                 <datalist id="mbtiOptions">
                     <option value="ISTJ">ISTJ</option>
                     <option value="ISFJ">ISFJ</option>

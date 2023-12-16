@@ -89,7 +89,7 @@
         <tr><td>학부</td><td>${boardVO.major}</td></tr>
         <tr><td>semester</td><td>${boardVO.semester}</td></tr>
         <tr><td>birthday</td><td>${boardVO.birthday}</td></tr>
-        <tr><td>MBTI</td><td>${boardVO.MBTI}</td></tr>
+        <tr><td>MBTI</td><td>${boardVO.mbti}</td></tr>
         <tr><td>학부</td><td>${boardVO.comment}</td></tr>
     </table>
     <button class="goback" type="button" onclick="location.href='../memberslist'">Go Back</button>

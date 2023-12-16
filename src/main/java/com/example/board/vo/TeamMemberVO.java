@@ -10,7 +10,7 @@ public class TeamMemberVO {
     private String major;
     private int semester;
 private String birthday;
-    private String MBTI;
+    private String mbti;
 private String comment;
     private Date regdate;
 
@@ -70,12 +70,12 @@ private String comment;
         this.birthday = birthday;
     }
 
-    public String getMBTI() {
-        return MBTI;
+    public String getMbti() {
+        return mbti;
     }
-    public void setMBTI(String MBTI) {
+    public void setMbti(String mbti) {
 
-        this.MBTI = MBTI;
+        this.mbti = mbti;
     }
 
     public String getComment() {

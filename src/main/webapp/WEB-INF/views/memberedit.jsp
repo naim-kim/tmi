@@ -151,7 +151,7 @@
 			</tr>
 			<tr><td>MBTI:</td><td>
 			<label>
-				<form:input path="MBTI" list="mbtiOptions" required="true"/>
+				<form:input path="mbti" list="mbtiOptions" required="true"/>
 			</label>
 				<datalist id="mbtiOptions">
 					<option value="ISTJ"></option>
