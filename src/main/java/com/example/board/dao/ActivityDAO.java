@@ -1,7 +1,6 @@
 package com.example.board.dao;
 
-import com.example.board.vo.ActivityVO;
-import com.example.board.vo.ActivityVO;
+import com.example.board.ActivityVO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
