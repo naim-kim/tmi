@@ -11,30 +11,31 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class TeamMemberDAO extends SqlSessionDaoSupport implements TeamMember {
+public class TeamMemberDAO{
+    @Autowired
+    SqlSession sqlSession;
 
-    @Override
     public int insertBoard(TeamMemberVO vo) {
-        return getSqlSession().insert("insertBoard", vo);
+        return sqlSession.insert("insertBoard", vo);
     }
 
-    @Override
+
     public void deleteBoard(int seq) {
-        getSqlSession().delete("deleteBoard", seq);
+        sqlSession.delete("deleteBoard", seq);
     }
 
-    @Override
+
     public int updateBoard(TeamMemberVO vo) {
-        return getSqlSession().update("updateBoard", vo);
+        return sqlSession.update("updateBoard", vo);
     }
 
-    @Override
+
     public TeamMemberVO getBoard(int seq) {
-        return getSqlSession().selectOne("getBoard", seq);
+        return sqlSession.selectOne("getBoard", seq);
     }
 
-    @Override
+
     public List<TeamMemberVO> getBoardList() {
-        return getSqlSession().selectList("getBoardList");
+        return sqlSession.selectList("getBoardList");
     }
 }
