@@ -20,12 +20,20 @@
         }
 
         form {
-            width: 60%;
-            margin: 50px auto;
+            width: 70%;
+            margin: 20px auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr, td {
+            padding: 10px;
         }
 
         button {
@@ -44,7 +52,8 @@
         }
         label {
             display: inline-block;
-            margin-bottom: 10px; /* Add space between labels */
+            margin-bottom: 10px;
+            text-align: left;
         }
         input {
             width: calc(60% - 12px);
@@ -53,9 +62,10 @@
         }
         img {
             display: block;
-            margin: 0 auto 20px; /* Add space below the image */
-            width: 100px; /* Set the width of the image */
-            height: auto; /* Maintain aspect ratio */
+            margin: 0 auto 20px;
+            width: 50%;
+            min-width: 200px;
+            height: auto;
         }
     </style>
 </head>
@@ -66,13 +76,15 @@
 </header>
 <div>
     <form method="post" action="loginOk">
-        <div><img src="path/to/your/image.jpg" alt="Image Description"></div>
-        <div><label> User ID: </label><label>
+        <div><img src="https://img.freepik.com/free-vector/welcome-concept-illustration_114360-22393.jpg?w=996&t=st=1702732168~exp=1702732768~hmac=a78056e51d9332403db49fcc06c5bb23f48fec119d9f6f7cf93aabf9fefceab5" alt="Welcome page"></div>
+        <table>
+            <tr><td>User ID:</td><td><label>
             <input type='text' name='userid' />
-        </label></div>
-        <div><label> Password: </label><label>
+        </label></td></tr>
+            <tr><td>Password:</td><td><label>
             <input type='password' name='password' />
-        </label></div>
+            </label></td></tr>
+        </table>
         <button type='submit'>login</button>
     </form>
 </div>
